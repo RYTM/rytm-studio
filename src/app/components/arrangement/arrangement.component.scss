@@ -1,9 +1,9 @@
 @import '../../variables';
 
-.rs-timebar-block {
+.rs-arrangement-block {
   position: relative;
   width: 100%;
-  height: 100px;
+  flex: 1;
   background-color: $colorFillMidDark;
   border-radius: $borderRadius;
   margin-bottom: 10px;

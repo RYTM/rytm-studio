@@ -18,7 +18,8 @@ import { ElectronService } from './providers/electron.service';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
-import { TimebarComponent } from './components/timebar/timebar.component'
+import { TimebarComponent } from './components/timebar/timebar.component';
+import { ArrangementComponent } from './components/arrangement/arrangement.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -30,7 +31,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AppComponent,
     HomeComponent,
     SidebarComponent,
-    TimebarComponent
+    TimebarComponent,
+    ArrangementComponent
   ],
   imports: [
     BrowserModule,
