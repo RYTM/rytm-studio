@@ -1,9 +1,14 @@
 @import '../../variables';
 
-.rs-arrangement-block {
-  position: relative;
-  width: 100%;
+:host {
   flex: 1;
+  display: flex;
+}
+
+.rs-arrangement-block {
+  display: flex;
+  flex: 1;
+  position: relative;
   background-color: $colorFillMidDark;
   border-radius: $borderRadius;
   margin-bottom: 10px;

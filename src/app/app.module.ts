@@ -20,6 +20,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { TimebarComponent } from './components/timebar/timebar.component';
 import { ArrangementComponent } from './components/arrangement/arrangement.component';
+import { PianorollComponent } from './components/pianoroll/pianoroll.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -32,7 +33,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HomeComponent,
     SidebarComponent,
     TimebarComponent,
-    ArrangementComponent
+    ArrangementComponent,
+    PianorollComponent
   ],
   imports: [
     BrowserModule,
