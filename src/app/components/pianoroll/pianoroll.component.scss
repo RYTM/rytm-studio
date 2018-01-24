@@ -4,4 +4,14 @@
   width: 100%;
   height: 300px;
   background-color: $colorFillMidDark;
+  border-radius: $borderRadius;
+  resize: vertical;
+  overflow: auto;
+}
+
+.rs-pianoroll-resize-block {
+  height: 5px;
+  width: 100%;
+  background-color: $colorFillMid;
+  border-radius: $borderRadius;
 }

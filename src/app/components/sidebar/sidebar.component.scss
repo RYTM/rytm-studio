@@ -22,7 +22,7 @@
 
 .rs-tab-block__element {
   height: 100%;
-  padding: 10px 20px;
+  padding: 5px 10px;
   flex: 1;
   display: flex;
   justify-content: center;
@@ -32,7 +32,7 @@
   color: $colorTextLight;
   font-family: sans-serif;
   cursor: pointer;
-  transition: all ease-in-out 200ms;
+  transition: all ease-in-out 100ms;
 }
 
 .rs-tab-block__element--active {
