@@ -6,8 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./pianoroll.component.scss']
 })
 export class PianorollComponent implements OnInit {
+  constructor() {
+  }
 
-  constructor() { }
+  resizePianoroll() {
+    document.addEventListener("mousemove", this.calculatePianorollSize)
+    document.addEventListener("mouseup", () => {
+      document.removeEventListener("mousemove", this.calculatePianorollSize)
+    })
+  }
+
+  calculatePianorollSize() {
+    document.querySelector('.rs-pianoroll-block').style.height = `${window.innerHeight - event.pageY}px`
+  }
 
   ngOnInit() {
   }
