@@ -4,20 +4,25 @@
 
 }
 
-.rs-filemanager-list__element {
+.rs-filemanager-list-element {
   color: $colorTextLight;
-  padding: 10px 0;
+  font-size: 10px;
+  padding: 5px 0;
 }
 
-.rs-filemanager-list__element--folder {
-
+.rs-list-element__folder {
+  position: relative;
   &:before {
     content: "\f054";
     font-family: "Font Awesome 5 Pro";
-    font-size: 10px;
+    font-size: 8px;
     margin-right: 5px;
     vertical-align: middle;
     display: inline-flex;
     line-height: 14px;
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translatey(-50%);
   }
 }

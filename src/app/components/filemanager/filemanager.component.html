@@ -1,15 +1,12 @@
 <div class="rs-filemanager-block">
   <ul class="rs-filemanager-list-block">
-    <li class="rs-filemanager-list__element rs-filemanager-list__element--file">
-      Testfile
-    </li>
-    <li class="rs-filemanager-list__element rs-filemanager-list__element--folder">
-        Testfolder
-        <ul class="rs-filemanager-list-block">
-          <li class="rs-filemanager-list__element rs-filemanager-list__element--file">
-            Testfile
-          </li>
-        </ul>
+    <li class="rs-filemanager-list-element" *ngFor="let file of initialFiles">
+      <span *ngIf="!file.directory" class="rs-list-element__file">
+        {{file.name}}
+      </span>
+      <span *ngIf="file.directory" class="rs-list-element__folder" (click)="getSubDirectories(file.path)">
+        {{file.name}}
+      </span>
     </li>
   </ul>
 </div>
