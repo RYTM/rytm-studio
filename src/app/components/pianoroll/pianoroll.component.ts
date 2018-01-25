@@ -17,7 +17,14 @@ export class PianorollComponent implements OnInit {
   }
 
   calculatePianorollSize() {
-    document.querySelector('.rs-pianoroll-block').style.height = `${window.innerHeight - event.pageY}px`
+    const maxHeight = window.innerHeight - 300
+    const minHeight = 35
+    const newHeight = window.innerHeight - event.pageY
+    const pianoroll = document.querySelector('.rs-pianoroll-block')
+
+    newHeight < maxHeight && newHeight > minHeight ? pianoroll.style.height = `${newHeight}px` : null
+    newHeight > maxHeight ? pianoroll.style.height = `${maxHeight}px` : null
+    newHeight < minHeight ? pianoroll.style.height = `${minHeight}px` : null
   }
 
   ngOnInit() {

@@ -1,0 +1,23 @@
+@import '../../variables';
+
+.rs-filemanager-block {
+
+}
+
+.rs-filemanager-list__element {
+  color: $colorTextLight;
+  padding: 10px 0;
+}
+
+.rs-filemanager-list__element--folder {
+
+  &:before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 10px;
+    margin-right: 5px;
+    vertical-align: middle;
+    display: inline-flex;
+    line-height: 14px;
+  }
+}
