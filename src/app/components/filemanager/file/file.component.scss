@@ -1,0 +1,40 @@
+@import '../../../variables';
+.rs-filemanager-list-element {
+    font-size: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+.rs-list-element {
+    color: $colorTextLight;
+    transition: all ease-in-out 100ms;
+    
+    &:hover {
+        color: $colorFillHighlightLightBlue;
+    }    
+}
+
+.rs-list-element__folder {
+    position: relative;
+    &:before {
+      content: "\f054";
+      font-family: "Font Awesome 5 Pro";
+      font-size: 8px;
+      margin-right: 5px;
+      vertical-align: middle;
+      display: inline-flex;
+      line-height: 14px;
+      position: absolute;
+      top: 50%;
+      left: -10px;
+      transform: translatey(-50%);
+    }
+  }
+
+.rs-sublist-closed {
+    display: none;
+}
+
+.rs-sublist-open {
+    display: block;
+}

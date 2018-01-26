@@ -22,6 +22,7 @@ import { TimebarComponent } from './components/timebar/timebar.component';
 import { ArrangementComponent } from './components/arrangement/arrangement.component';
 import { PianorollComponent } from './components/pianoroll/pianoroll.component';
 import { FilemanagerComponent } from './components/filemanager/filemanager.component';
+import { FileComponent } from './components/filemanager/file/file.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -36,7 +37,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     TimebarComponent,
     ArrangementComponent,
     PianorollComponent,
-    FilemanagerComponent
+    FilemanagerComponent,
+    FileComponent
   ],
   imports: [
     BrowserModule,

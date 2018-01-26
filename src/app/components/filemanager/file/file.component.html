@@ -1,0 +1,11 @@
+<span *ngIf="file.directory" class="rs-list-element rs-list-element__folder" (click)="getSubdirectories()">
+    {{file.name}}
+</span>
+<span *ngIf="!file.directory" class="rs-list-element">
+    {{file.name}}
+</span>
+<ul *ngIf="getSubdirectory" class="rs-sublist-closed" [ngClass]="{'rs-sublist-open': openSublist }">
+    <li class="rs-filemanager-list-element" *ngFor="let file of subfiles">
+        <app-file [file]="file"></app-file>
+    </li>
+</ul>
