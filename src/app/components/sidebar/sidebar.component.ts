@@ -16,9 +16,13 @@ export class SidebarComponent implements OnInit {
     tab.classList.add("rs-tab-block__element--active")
 
     const contentBlock = document.querySelector(".rs-sidebar-content-block")
-    const contentBlockWidth = contentBlock.clientWidth
+    const contentBlockChildren = contentBlock.children
 
-    contentBlock.style.marginLeft = `-${contentBlockWidth * content}px`
+    const childrenWidth = [contentBlockChildren[0].clientWidth, contentBlockChildren[0].clientWidth + contentBlockChildren[1].clientWidth, contentBlockChildren[0].clientWidth + contentBlockChildren[1].clientWidth + contentBlockChildren[2].clientWidth]
+
+    contentBlock.style.marginLeft = `-${childrenWidth[content]}px`
+
+    console.log(childrenWidth[content])
 
   }
 

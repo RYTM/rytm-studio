@@ -33,9 +33,9 @@ function createWindow() {
   }));
 
   // Open the DevTools.
-  if (serve) {
-    win.webContents.openDevTools();
-  }
+  // if (serve) {
+  //   win.webContents.openDevTools();
+  // }
 
   // Emitted when the window is closed.
   win.on('closed', () => {
@@ -62,6 +62,8 @@ try {
     }
   });
 
+  
+
   app.on('activate', () => {
     // On OS X it's common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
@@ -69,6 +71,8 @@ try {
       createWindow();
     }
   });
+
+  app.commandLine.appendSwitch('--enable-viewport-meta', 'true');
 
 } catch (e) {
   // Catch Error

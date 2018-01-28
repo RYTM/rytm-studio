@@ -1,3 +1,44 @@
-<section class="rs-arrangement-block">
+<section #arrangement class="rs-arrangement-block">
+    <div class="rs-arrangement-channel-wrapper">
+        <div class="rs-arrangement-channel-header-block">
+        </div>
+    </div>
+    <div class="rs-arrangement-svg-wrapper">
+        <svg #svg
+            class="rs-arrangement-svg-block"
+            preserveAspectRatio="none"
+            [attr.viewBox]="svgViewBox"
+            (mouseenter)="setCursorInArrangement(true)"
+            (mouseleave)="setCursorInArrangement(false)"
+            (mousewheel)="zoomArrangement($event)">
 
+            <rect *ngFor="let rect of beatLines; let i = index" 
+                [attr.class]="rect.class" 
+                [attr.x]="svgX * i" 
+                y="0" 
+                width="1px" 
+                height="1px">
+            </rect>
+        </svg>
+        <!-- <div class="rs-arrangement-channel-block"> -->
+            <svg class="rs-arrangement-midi-block"
+                preserveAspectRatio="none"
+                [attr.viewBox]="svgChannelViewBox"
+                (mousewheel)="zoomArrangement($event)">
+                <rect
+                    x="0"
+                    y="0" 
+                    [attr.width]="svgX" 
+                    height="1px"
+                    class="rs-midi-region">
+                </rect>
+            </svg>
+        <!-- </div> -->
+    </div>
+    
+
+
+    <!-- <div class="rs-arrangement-channel-block" [style.width]="arrangementChannelWidth">
+        
+    </div> -->
 </section>
