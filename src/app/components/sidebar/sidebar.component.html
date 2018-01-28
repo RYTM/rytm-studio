@@ -1,17 +1,23 @@
 <section class="rs-sidebar-block">
     <div class="rs-sidebar-tab-block">
-        <div class="rs-tab-block__element rs-tab-block__element--active" (click)="switchSidebarTabs()">
+        <div class="rs-tab-block__element rs-tab-block__element--active" (click)="switchSidebarTabs(0)">
             Files
         </div>
-        <div class="rs-tab-block__element" (click)="switchSidebarTabs()">
+        <div class="rs-tab-block__element" (click)="switchSidebarTabs(1)">
             Channel
         </div>
-        <div class="rs-tab-block__element" (click)="switchSidebarTabs()">
+        <div class="rs-tab-block__element" (click)="switchSidebarTabs(2)">
             Project
         </div>
     </div>
 
     <div class="rs-sidebar-content-block">
         <app-filemanager></app-filemanager>
+        <div>
+            Channel
+        </div>
+        <div>
+            Project
+        </div>
     </div>
 </section>
